@@ -1,0 +1,30 @@
+#venta de billetes si eres mayor o menor de edad
+#preguntar la edad de la persona
+#si persona es menor de edad < 18,  el precio es de 7$
+#si persona es mayor de edad > 18,  el precio es de 12$
+#preguntar si la persona desea pop corn, si oui ajouter 2$ au prix total
+#afficher le prix total
+
+# age de la personne "Quel est votre age ?"
+age = int(input("Quel est votre age ?"))
+
+# si la persona es menor de 18, el precio es de  7$
+if age < 18:
+    prix_total = 7
+# si es una persona mayor de 18 entonces el precio es 12$
+else:
+    prix_total = 12
+
+# ou alors en ternaire
+# prix_total = (7, 12)[age < 18]
+
+# souhaitez-vous du pop corn ?
+pop_corn = input("Quiere pop-corn ? (Si, No)")
+
+# si oui
+if pop_corn == "Si":
+    prix_total += 2
+
+print("Vous devez payer", prix_total, "$")
+
+Button(root, text="Click please").pack()
